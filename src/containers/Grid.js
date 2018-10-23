@@ -6,7 +6,7 @@ class Grid extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      scroll: true
+      scroll: false
     };
     this.scroll = this.scroll.bind(this);
   }
@@ -29,10 +29,7 @@ class Grid extends Component {
         { Array.apply(null, Array(40*40)).map(Boolean).map(Number)
           .fill(null)
           .map((g, i) =>
-            <GridItem 
-                visibleTop={this.state.visibleTop}
-                visibleLeft={this.state.visibleLeft}
-                key={i} />)
+            <GridItem key={i} />)
         }
       </div>
     );
